@@ -65,7 +65,8 @@ function onStop() {
 }
 
 function historySaved() {
-  historyHeading.innerText = "History";
+
+  historyHeading.innerHTML = "<hr><h3>History</h3>";
   const clearButton = document.createElement("button");
   // clearButton.HTML = `<button class="btn">CLear</button>`;
   const historyItem = `${padTime(minutes)}:${padTime(seconds)}:${padMilliseconds(milliseconds)}`;
@@ -79,7 +80,7 @@ function onReset() {
   seconds = 0;
   milliseconds = 0;
   minutesPoint.innerText = `00`;
-  millisecondsPoint.innerText = `00`;
+  millisecondsPoint.innerText = `000`;
   secondsPoint.innerText = `00`;
   historyList.innerHTML = "";
   historyHeading.innerText="";
